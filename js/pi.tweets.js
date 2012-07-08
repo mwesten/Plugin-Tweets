@@ -70,7 +70,7 @@ function getTwitterFeed(user, count, replies, retweets) {
   count = parseInt(count, 10);
   jQuery.ajax({  
 	dataType: 'jsonp',
-	url: "http://api.twitter.com/1/statuses/user_timeline/" + user + ".json?trim_user=true&count=" + (count + 20) + "&include_entities=1&include_rts=" + (retweets ? "0" : "1") +"&exclude_replies=" + (replies ? "0" : "1"),
+	url: "http://api.twitter.com/1/statuses/user_timeline/" + user + ".json?trim_user=true&count=" + (count + 40) + "&include_entities=1&include_rts=" + (retweets ? "0" : "1") +"&exclude_replies=" + (replies ? "0" : "1"),
 	error: function (err) { $('#'+user+'_tweets li.loading').addClass('error').text("Twitter exploded"); },
    	success: function(data) { showTwitterFeed(data.slice(0, count), user); }
   })

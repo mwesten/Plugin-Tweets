@@ -27,7 +27,7 @@ Calling the plugin from the theme is done with `{{ tweets:tweets }}`.
 
 It has the following parameters:
 
- Paramter 	| Default	| Function
+ Parameter 	| Default	| Function
  -----------|--------	| --------
  `name` 	| *empty* 	| This is someone's twitter name; everything that's after the `@` sign.
  `count` 	| *10* 		| The number of tweets that you'd like to display.
@@ -44,3 +44,7 @@ Show the 10 latest tweets by @statamic without replies and retweets: `{{ tweets:
 #Styling
 
 If you want to override the default styling, copy the `_add-ons/tweets/css/pi.tweets.css` file to your themes `css` folder; ie: `_themes/london-wild/css/pi.tweets.css`. Then change the css file in your theme folder; this takes precedence.
+
+
+# Disclaimer
+I've 'written' this plugin for my own use. It comes without any guarantee, so your mileage may vary in using it. If you find bugs or have great additions you'd like to share, use github to fork the project and share your improvements by initiating pull requests.
