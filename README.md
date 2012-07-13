@@ -4,9 +4,13 @@ Plugin-Tweets
 Tweets sidebar plugin for Statamic
 
 # Installation
-## Copy the files to their destination
-Download or clone this project on your system.
-Add the contents of the folder to the `_add-ons/tweets` folder.
+## Clone or Copy the files to their destination
+Clone this project on your system:
+
+    cd webfolder/_add-ons
+    git clone git://github.com/mwesten/Plugin-Tweets.git tweets
+
+Or download the project and add the contents of archive to the `_add-ons/tweets` folder.
 
 ## Configure twitter
 Make sure you set the `twitter_name:` to your twitter name in the `_config/globals.yaml`
@@ -31,15 +35,15 @@ It has the following parameters:
  -----------|--------	| --------
  `name` 	| *empty* 	| This is someone's twitter name; everything that's after the `@` sign.
  `count` 	| *10* 		| The number of tweets that you'd like to display.
- `show_replies` 	| *false*	| If replies to other users need to be included in this list.
- `show_retweets` | *true*	| If retweets done by this user need to be included in this list.
+ `show_replies` 	| *no*	| If replies to other users need to be included in this list.
+ `show_retweets` | *yes*	| If retweets done by this user need to be included in this list.
 
 
 **Examples:**
 
-Show the 4 latest tweets by @statamic with replies and retweets: `{{ tweets:tweets name="statamic" count="4" show_replies="true"}}`
+Show the 4 latest tweets by @statamic with replies and retweets: `{{ tweets:tweets name="statamic" count="4" show_replies="yes"}}`
 
-Show the 10 latest tweets by @statamic without replies and retweets: `{{ tweets:tweets name="statamic" show_retweets="false"}}`
+Show the 10 latest tweets by @statamic without replies and retweets: `{{ tweets:tweets name="statamic" show_retweets="no"}}`
 
 #Styling
 
